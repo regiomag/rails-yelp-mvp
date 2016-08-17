@@ -2,9 +2,7 @@ Rails.application.routes.draw do
 
   get '/', to: "restaurants#index"
   resources :restaurants do
-    collection do
-      resources :reviews, only: [:new, :create]
-    end
+    resources :reviews, only: [:new, :create]
   end
   # get 'restaurants/new'
 

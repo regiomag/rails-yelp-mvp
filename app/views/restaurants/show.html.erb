@@ -1,2 +1,18 @@
-<h1>Restaurants#show</h1>
-<p>Find me in app/views/restaurants/show.html.erb</p>
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('http://unsplash.it/1000x600');">
+  <div class="banner-content">
+    <h1><%= @restaurant.name%></h1>
+    <p>Address : <%= @restaurant.address%></p>
+    <p>Phone number: <%= @restaurant.phone_number%></p>
+    <p>Phone number: <%= @restaurant.reviews%></p>
+    <% @restaurant.reviews.each do |review|%>
+        <ul>
+          <li>
+            <p><%= review%></p>
+            <% end %>
+          </li>
+        </ul>
+    <%= link_to "RATE IT NOW", new_restaurant_review_path(@restaurant), class: "btn btn-primary btn-lg"%>
+    <!-- <a class="btn btn-primary btn-lg">RATE IT</a> -->
+    <!-- html_options= {class="btn btn-primary btn-lg"} -->
+  </div>
+</div>
