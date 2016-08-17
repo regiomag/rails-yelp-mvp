@@ -14,3 +14,5 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+// assets/javascripts/application.js
+//= require plugin
